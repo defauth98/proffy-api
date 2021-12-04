@@ -31,7 +31,7 @@ git clone https://github.com/defauth98/proffy-api.git proffy-api
 cd proffy-api
 
 # Rode o projeto usando o make file
-make api
+make run
 ```
 
 Crie um arquivo .env e configure as variaveis de ambiente

@@ -1,4 +1,4 @@
-api:
+run:
 	docker-compose up -d
 
 stop:
