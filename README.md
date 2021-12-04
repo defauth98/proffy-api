@@ -30,7 +30,7 @@ git clone https://github.com/defauth98/proffy-api.git proffy-api
 # Entre no diretório do backend
 cd proffy-api
 
-# Instale as dependencias
+# Rode o projeto usando o make file
 make api
 ```
 
