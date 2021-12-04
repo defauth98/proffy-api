@@ -9,7 +9,7 @@ services:
       - 3333:3333
     restart: "on-failure"
     volumes:
-      - ./api/:/server
+      - ./:/server
     working_dir: /server
     networks:
       - proffy
