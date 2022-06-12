@@ -1,4 +1,4 @@
-import * as Knex from 'knex';
+import { Knex } from 'knex';
 
 import bcrypt from 'bcrypt';
 import { saltRounds } from '../../controllers/AuthController';
