@@ -92,15 +92,14 @@ export default class AuthController {
           'users.avatar'
         );
 
-      await bcrypt.compare(password, userPassword, function (err, result) {
-        if (result) {
-          const token = generateToken(userExists[0].id);
+      const result = bcrypt.compareSync(password, userPassword);
+      if (result) {
+        const token = generateToken(userExists[0].id);
 
-          return res.status(200).json({ user: users[0], token });
-        } else {
-          return res.status(400).json({ error: 'Wrong password' });
-        }
-      });
+        return res.status(200).json({ user: users[0], token });
+      } else {
+        return res.status(400).json({ error: 'Wrong password' });
+      }
     } catch (error) {
       return res.status(400).json({ error: 'Login error' });
     }
