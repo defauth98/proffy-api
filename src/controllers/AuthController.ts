@@ -101,8 +101,8 @@ export default class AuthController {
       } else {
         return res.status(400).json({ error: 'Wrong password' });
       }
-    } catch (error) {
-      return res.status(400).json({ error: 'Login error' });
+    } catch (error: any) {
+      return res.status(400).json({ error: error.message });
     }
   }
 
