@@ -75,9 +75,10 @@ export default class AuthController {
         .where({ email })
         .select('users.password');
 
-      if (!userExists[0]) {
+      if (!userExists[0] || !userExists[0].password) {
         return res.status(400).json({ Error: 'Email not exists' });
       }
+
       const userPassword = userExists[0].password;
 
       const users = await db('users')
