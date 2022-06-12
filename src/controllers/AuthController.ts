@@ -94,6 +94,7 @@ export default class AuthController {
         );
 
       const result = bcrypt.compareSync(password, userPassword);
+
       if (result) {
         const token = generateToken(userExists[0].id);
 
